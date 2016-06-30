@@ -88,7 +88,7 @@ Michael Desa
 
 ##### Kapacitor Review (30 min) 1:30-2:00
 
-#### 4. Intro to Kapacitor Part 1 (15-30 min) 2:00-2:30
+#### 4. Intro to Kapacitor Part 2 (15-30 min) 2:00-2:30
 * Writing a UDF with Kapacitor in Python
 
 #### 5. The Dream (30 min) 2:30-3:00
