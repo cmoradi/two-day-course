@@ -36,15 +36,15 @@ Michael Desa
 
 ##### Quiz (20 min) 11:00-11:20
 
-#### Break 11:20-11:300
+#### Break 11:20-11:30
 
-#### 3. Working with the CLI and Query Language (45-60 min) 11:30-12:15
+#### 3. Working with the CLI and Query Language (45 min) 11:30-12:15
 
 * Work with the InfluxDB CLI
 * The InfluxDB Query Language
 * Querying Data (Project)
 
-#### Quiz (20 min) 12:15-12:30
+#### Quiz (15 min) 12:15-12:30
 
 #### LUNCH (60 min) 12:30-1:30
 

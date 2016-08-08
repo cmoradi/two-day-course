@@ -1,4 +1,4 @@
-# 2. Introduction to InfluxDB (45-60 min) 9:30-10:30
+# 2. Introduction to InfluxDB
 
 * Getting Started with Time-Series Data
 * Marketing about other products
@@ -14,25 +14,25 @@
 ## Quiz (20 min) 10:30-10:50
 * Questions about the InfluxDB data model
 
-#### 1. What is the difference between regular and irregular time series?
+# 1. What is the difference between regular and irregular time series?
 
-#### 2. What are the names of the InfluxDB components on the graph on the screen? Additionally, please describe the roles of each of the components.
+# 2. What are the names of the InfluxDB components on the graph on the screen? Additionally, please describe the roles of each of the components.
 
-#### 3. What types of values can be stored as tag values?
+# 3. What types of values can be stored as tag values?
 
-#### 4. What types of values can be stored as field values?
+# 4. What types of values can be stored as field values?
 
-#### 5. What is the collection of all of the tags called?
+# 5. What is the collection of all of the tags called?
 
-#### 6. What is the collection of all of the fields called?
+# 6. What is the collection of all of the fields called?
 
-#### 7. What is the maximum number of tags that InfluxDB allows?
+# 7. What is the maximum number of tags that InfluxDB allows?
 
-#### 8. What is the maximum number of fields that InfluxDB allows?
+# 8. What is the maximum number of fields that InfluxDB allows?
 
-#### 9. What is a series? How is it different from a measurement?
+# 9. What is a series? How is it different from a measurement?
 
-#### 10. Express a point in line protocol that has *measurement* `rainfall`, 3 *tags* `location=sf`, `meter_id=5a`, and `weather=sunny`, and 2 *fields* with keys `total` (float64), `is_raining` (bool).
+# 10. Express a point in line protocol that has *measurement* `rainfall`, 3 *tags* `location=sf`, `meter_id=5a`, and `weather=sunny`, and 2 *fields* with keys `total` (float64), `is_raining` (bool).
 
-#### 11. Write some data into InfluxDB using the CLI
+# 11. Write some data into InfluxDB using the CLI
 
