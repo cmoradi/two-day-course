@@ -48,36 +48,37 @@ Michael Desa
 
 #### LUNCH (60 min) 12:30-1:30
 
-#### 3. Managing InfluxDB (15-30 min) 1:30-2:00
+#### Review Quiz (15 min) 1:30-1:45
+
+#### 4. Managing InfluxDB (15 min) 1:45-2:00
 * The InfluxDB Configuration file
 * Backup and Restore
 * Upgrading Instances
 
-#### 4. Enterprise InfluxDB (30-45 min) 2:00-2:45
-* Install and configure Enterprise InfluxDB
+#### 5. Schema design (45-60 min) 2:00-3:00
+* A little bit deeper with the InfluxDB Data Model (RP's and Databases)
+* Continuous Queries and Retention policies
+* Schema Design (Project)
 
-#### Break & Finish Set up 2:45-3:00
+##### Quiz (20 min) 3:00-3:20
 
-#### 5. Intro to Telegraf & Graphing (30-60 min) 3:00-4:00
-* Install Telegraf and get it talking to your InfluxDB instance
+#### General Q&A 3:20-
 
-##### Quiz (20 min) 4:00-4:20
-
-#### General Q&A 4:20-
-
+--------------------------------------------------------------------------------
 
 ### Day 2
 
 #### 1. Overview of Previous Day (15-30 min) 9:30-10:00
 
-#### 2. Schema design (45-60 min) 10:00-11:00
-* A little bit deeper with the InfluxDB Data Model (RP's and Databases)
-* Continuous Queries and Retention policies
-* Schema Design (Project)
+#### 4. Enterprise InfluxDB (30-45 min) 10:00-10:30
+* Install and configure Enterprise InfluxDB
 
-##### Quiz (20 min) 11:00-11:20
+#### Break & Finish Set up 10:30-10:45
 
-#### Break 11:20-11:30
+#### 5. Intro to Telegraf & Graphing (30-60 min) 10:45-11:15
+* Install Telegraf and get it talking to your InfluxDB instance
+
+##### Quiz (15 min) 11:15-11:30
 
 #### 3. Intro to Kapacitor Part 1 (45-60 min) 11:30-12:30
 * Install Kapacitor and get it talking to your InfluxDB instance
@@ -86,7 +87,7 @@ Michael Desa
 
 #### LUNCH (60 min) 12:30-1:30
 
-##### Kapacitor Review (30 min) 1:30-2:00
+##### Kapacitor Exercises (30 min) 1:30-2:00
 
 #### 4. Intro to Kapacitor Part 2 (15-30 min) 2:00-2:30
 * Writing a UDF with Kapacitor in Python
