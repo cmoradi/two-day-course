@@ -22,7 +22,8 @@ Michael Desa
 * Telegraf
 * Enterprise InfluxDB
 
-## Schedule
+--------------------------------------------------------------------------------
+
 ### Day 1
 
 #### 1A. Getting to know one another (15-30 min AB) 9:30-10:00
