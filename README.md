@@ -71,17 +71,17 @@ Michael Desa
 
 #### 1. Overview of Previous Day (15-30 min) 9:30-10:00
 
-#### 4. Enterprise InfluxDB (30-45 min) 10:00-10:30
+#### 2. Enterprise InfluxDB (30-45 min) 10:00-10:30
 * Install and configure Enterprise InfluxDB
 
 #### Break & Finish Set up 10:30-10:45
 
-#### 5. Intro to Telegraf & Graphing (30-60 min) 10:45-11:15
+#### 3. Intro to Telegraf & Graphing (30-60 min) 10:45-11:15
 * Install Telegraf and get it talking to your InfluxDB instance
 
 ##### Quiz (15 min) 11:15-11:30
 
-#### 3. Intro to Kapacitor Part 1 (45-60 min) 11:30-12:30
+#### 4. Intro to Kapacitor Part 1 (45-60 min) 11:30-12:30
 * Install Kapacitor and get it talking to your InfluxDB instance
 * Using Kapacitor for data processing
 * Using Kapcitor for alerting
@@ -90,10 +90,10 @@ Michael Desa
 
 ##### Kapacitor Exercises (30 min) 1:30-2:00
 
-#### 4. Intro to Kapacitor Part 2 (15-30 min) 2:00-2:30
+#### 5. Intro to Kapacitor Part 2 (15-30 min) 2:00-2:30
 * Writing a UDF with Kapacitor in Python
 
-#### 5. The Dream (30 min) 2:30-3:00
+#### 6. The Dream (30 min) 2:30-3:00
 * Go Through the whole setup in 30 mintues.
 
 #### General Q&A 3:00-
