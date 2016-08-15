@@ -43,7 +43,7 @@ batch
 
 **Hint**
 ```sh
-$ kapacitor define -name cpu_outliers -type batch -tick cpu_outliers.tick -dbrp telegraf.default
+$ kapacitor define cpu_outliers -type batch -tick cpu_outliers.tick -dbrp telegraf.default
 $ kapacitor enable cpu_outliers
 ```
 
