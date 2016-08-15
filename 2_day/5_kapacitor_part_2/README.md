@@ -1,59 +1,56 @@
-# 2. Introduction to Kapacitor
-* Install and configure Kapacitor
-* Process data with Kapacitor
-* Alert on data with Kapacitor
+# 3. User Defined Functions with Kapacitor
+* Write a UDF in Python
+* Configure a UDF with Kapacitor
 
 ## By the end of this section students will be able to...
-* Describe what Kapacitor is and when to use it
-* Install and Configure Kapacitor
-* Explain the Kapacitor computational model
-* Understand the TICKscript Syntax
-* Process data with Kapacitor.
-* Alert on data with Kapacitor.
-
+* Describe what a User Defined Function (UDF) is and its role in Kapacitor
+* Explain the interface that a UDF needs to implement
+* Configure a UDF to work with Kapacitor
 
 ## Exercises
 
-# 1. Create tasks for the TICKscripts in the `scripts` folder.
+### Using a UDF
 
-### 2A. Convert the following CQ into a Kapacitor batch task.
-```sql
-CREATE CONTINUOUS QUERY mycq ON air_data RESAMPLE EVERY 1m
-BEGIN
-  SELECT
-   median(lead) as lead,
-   mean(co2_ppm) as co2_ppm,
-   max(smog_level) as smog_level,
-   min(so2_level) as so2_level
-  INTO "air_data"."default"."new_polutants"
-  FROM "air_data"."24_hour"."polutants"
-  GROUP BY time(60m), *
-END
+#### 1. Configure Kapacitor for the `outliers` UDF.
+
 ```
-### 2B. Convert the following CQ into a Kapacitor stream task.
-```sql
-CREATE CONTINUOUS QUERY mycq ON air_data RESAMPLE EVERY 1m
-BEGIN
-  SELECT
-   median(lead) as lead,
-   mean(co2_ppm) as co2_ppm,
-   max(smog_level) as smog_level,
-   min(so2_level) as so2_level
-  INTO "air_data"."default"."new_polutants"
-  FROM "air_data"."24_hour"."polutants"
-  GROUP BY time(60m), *
-END
+[udf]
+[udf.functions]
+    [udf.functions.outliers]
+        # Should be the path to the outliers binary on your machine
+        prog = "/Users/michaeldesa/go/src/github.com/influxdata/capital-one-slides/2_kapacitor_and_telegraf/5_udfs_with_kapacitor/udfs/osx/outliers"
+        timeout = "10s"
 ```
 
-### 3. Create a task
-Using the data from the [`schema`](https://github.com/influxdata/capital-one-training/tree/master/1_intro_to_influxdata/5_schema_design/linux) binary from the schema design section.
+#### 3. Read over the `python` implementation of the `outliers` UDF.
 
-### 3A. Create a streaming TICKscript that does the following:
 
-1. Issue an `info` alert when the average `lead` level for a 1 minute interval is greater than `50`.
-2. Issue an `warn` alert when the average `lead` level for a 1 minute interval is greater than `70`.
-3. Issue an `crit` alert when the average `lead` level for a 1 minute interval is greater than `90`.
+#### 3. Create and enable a task in Kapacitor with the following TICKscript
 
-### 3B. Create a streaming TICKscript that does the following:
+**cpu_outliers.tick**
+```js
+batch
+    |query('''
+        SELECT * FROM "telegraf"."autogen"."cpu" WHERE cpu='cpu-total'
+    ''')
+    @outliers()
+      .field('user')
+    |influxDBOut()
+      .database('mydb')
+      .retentionPolicy('autogen')
+      .measurement('cpu_outliers')
+```
 
-1. Computes the ratio of the averave `smog_level` and `so2_level` for a 2 minute interval that emits to the pipeline every minute.
+**Hint**
+```sh
+$ kapacitor define -name cpu_outliers -type batch -tick cpu_outliers.tick -dbrp telegraf.default
+$ kapacitor enable cpu_outliers
+```
+
+
+#### 4. Create a Graph in Grafana for the measurement `cpu_outliers` in the database `mydb`
+
+#### 5. What types of UDFs would you like to see?
+
+#### 6. Bonus: For those with `python` or `go` experience, try creating your own basic UDF.
+
